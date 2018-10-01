@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Services</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap4/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="/css/bootstrap4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="/css/bootstrap4/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">Company Name</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- services -->
+    <div class="container block-content">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div>
+                    <h3>Lorem ipsum </h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At quos, alias debitis ratione a
+                        placeat
+                        maxime odio veritatis corporis dolorum consequuntur ipsa labore amet magnam dicta natus sint
+                        omnis
+                        repudiandae?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quia recusandae ab reprehenderit
+                        quam, officiis, explicabo rem nam nobis sint illum. Maiores dicta iste possimus blanditiis
+                        ratione
+                        voluptatem similique excepturi.</p>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div>
+                    <div class="card">
+                        <div class="card-heading">
+                            <h5>Register</h5>
+                        </div>
+                        <div class="form-child">
+                            <form action="#" id="myform" onsubmit="return checkValidation()">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input id="input-name" type="text" class="form-control" required />
+                                    <div class="invalid-feedback">
+                                        <p id="name-invalid-feedback">Please provide a valid name.</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input id="input-email" type="email" class="form-control" required />
+                                    <div class="invalid-feedback">
+                                        <p id="email-invalid-feedback">Please provide a valid email.</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <label>Date of Birth</label>
+                                    <input id="input-dob" type="date" class="form-control" required />
+                                    <div class="invalid-feedback">
+                                        <p id="dob-invalid-feedback">Please provide a valid Date of Birth.</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <label>Mobile Number</label>
+                                    <input id="input-mobile" type="text" class="form-control" required />
+                                    <div class="invalid-feedback">
+                                        <p id="mobile-invalid-feedback">Please provide a valid Mobile Number.</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label>Username</label>
+                                    <input id="input-username" type="text" class="form-control" required />
+                                    <div class="invalid-feedback">
+                                        <p id="username-invalid-feedback">Please provide a valid Username.</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input id="input-password" type="password" class="form-control" required />
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                        Your password must be 8-20 characters long, contain letters and numbers, and
+                                        must not contain spaces, special characters, or emoji.
+                                    </small>
+                                    <div class="invalid-feedback">
+                                        <p id="pass-invalid-feedback">Please provide a valid Password.</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Confirm Password</label>
+                                    <input id="input-cpassword" type="password" class="form-control" required />
+                                    <div class="invalid-feedback">
+                                        <p id="cpass-invalid-feedback">Password Mismatch</p>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div>
+            &copy; 2018 All right reserved
+        </div>
+    </footer>
+
+
+    <script>
+        function removeInvalidClass() {
+            document.getElementById("input-name").classList.remove("is-invalid");
+            document.getElementById("input-email").classList.remove("is-invalid");
+            document.getElementById("input-dob").classList.remove("is-invalid");
+            document.getElementById("input-mobile").classList.remove("is-invalid");
+            document.getElementById("input-username").classList.remove("is-invalid");
+            document.getElementById("input-password").classList.remove("is-invalid");
+            document.getElementById("input-cpassword").classList.remove("is-invalid");
+        }
+
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function checkValidation() {
+            removeInvalidClass();
+            var name = document.getElementById("input-name").value;
+            var email = document.getElementById("input-email").value;
+            var dob = document.getElementById("input-dob").value;
+            var mobile = document.getElementById("input-mobile").value;
+            var uname = document.getElementById("input-username").value;
+            var pass = document.getElementById("input-password").value;
+            var c_pass = document.getElementById("input-cpassword").value;
+
+            if (!validateEmail(email)) {
+                document.getElementById("input-email").classList.add("is-invalid");
+                return false;
+            }
+
+            var mobileRegex = /^[0]?[789]\d{9}$/;
+            if (!mobileRegex.test(String(mobile).toLowerCase())) {
+                document.getElementById("input-mobile").classList.add("is-invalid");
+                return false;
+            }
+
+            if (uname != null && uname.length > 0) {
+                if (uname.length < 4) {
+                    document.getElementById("input-username").classList.add("is-invalid");
+                    document.getElementById("username-invalid-feedback").innerHTML = "Username length must be greater than 4";
+                    return false;
+                }
+            }
+
+            var pwdRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,20}$/;
+            if (!pwdRegex.test(String(pass))) {
+                document.getElementById("input-password").classList.add("is-invalid");
+                return false;
+            }
+
+            if (pass !== c_pass) {
+                document.getElementById("input-cpassword").classList.add("is-invalid");
+                return false;
+            }
+
+            console.log("Reset");
+            document.getElementById("myform").reset();
+            alert("Thankyou for your response!");
+
+        }
+    </script>
+
+</body>
+
+</html>
