@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block body%}
+    <div class="card">
+        <div class="card-header">
+            Result
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p>Name : {{name}}</p>
+                    <p>Registration Number : {{reg_no}}</p>
+                    <p>Semester : {{semester}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="result-table" class="table table-bordered">
+                        <thead id="result-table-thead">
+                            <tr>
+                                <th>Subject Name</th>
+                                <th>Marks</th>
+                                <th>Total Marks</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody id="result-table-tbody">
+                            {% for marks in marklist%}
+                            <tr>
+                                <td>{{marks['sub_name']}}</td>
+                                <td>{{marks['sub_mark']}}</td>
+                                <td>{{marks['sub_tmark']}}</td>
+                                <td>{{marks['grades']}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+            <!-- sem status -->
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <p>Semester Status : {{sem_status}}</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+{% endblock %}
