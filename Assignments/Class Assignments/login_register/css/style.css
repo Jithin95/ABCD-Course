@@ -1,0 +1,21 @@
+body {
+    background-color: #003636;
+}
+
+.container-login {
+    max-width: 500px;
+    text-align: center;
+    margin-top: 100px;
+}
+.container-register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link-class {
+    color: #f00;
+}
+
+.link-class:hover {
+    color: #d00;
+}

@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.parent {
+    flex: 1;
+    border: 1px solid grey;
+    max-width: 700px;
+    padding: 10px 100px;
+    margin: 20px;
+}
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.heading {
+    text-align: center;
+    padding: 5px;
+}
+
+
+#result-block {
+    display: none;
+}
+
+#username {
+    text-transform: capitalize;
+}
+
+#regno {
+    text-transform: uppercase;
+}
+
+.capitalize-text {
+    text-transform: capitalize;
+}
+
+.uppercase-text {
+    text-transform: capitalize;
+}
+
+table {
+    margin: 10px 0px;
+}
