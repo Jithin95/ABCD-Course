@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block body%}
-    <div class="card">
-        <div class="card-header">
+    <div class="contents card">
+        <div class="card-header text-center">
             Result
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <p>Name : {{name}}</p>
-                    <p>Registration Number : {{reg_no}}</p>
-                    <p>Semester : {{semester}}</p>
+                    <p>Name : <span class="text-uppercase">{{name}}</span></p>
+                    <p>Registration Number : <span class="text-uppercase">{{reg_no}}</span></p>
+                    <p>Semester : <span class="text-uppercase">{{semester}}</span></p>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                         <tbody id="result-table-tbody">
                             {% for marks in marklist%}
                             <tr>
-                                <td>{{marks['sub_name']}}</td>
+                                <td><span class="text-uppercase">{{marks['sub_name']}}</span></td>
                                 <td>{{marks['sub_mark']}}</td>
                                 <td>{{marks['sub_tmark']}}</td>
                                 <td>{{marks['grades']}}</td>
@@ -43,11 +43,17 @@
             <!-- sem status -->
             <div class="row">
                 <div class="col-md-12 text-right">
-                    <p>Semester Status : {{sem_status}}</p>
+                    <p>Semester Status : {% if sem_status == "Failed" %} <span class="red-text">{{sem_status}}</span>
+                        {% else %} <span class="green-text">{{sem_status}}</span>
+                    {% endif %}</p>
                 </div>
             </div>
 
-
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="button" name="back_to_home" class="btn" onclick="window.location.href='{{ url_for( 'index' ) }}';">Generate Another Result</button>
+                </div>
+            </div>
         </div>
 
     </div>

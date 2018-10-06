@@ -27,8 +27,12 @@ def calculateGrade(percent):
         else :
             return 'Invalid'
 
-@app.route("/", methods=['POST', 'GET'])
+@app.route("/", methods=['GET'])
 def index():
+    return render_template("index.html")
+
+@app.route("/result", methods=['GET', 'POST'])
+def resultMethod():
     if request.method == 'POST':
         # print(request.form['username'])
         username = request.form['user_name']
@@ -81,9 +85,10 @@ def index():
             else:
                 semstatus = "Failed"
 
+            # marks = {"name": username, "reg_no": reg_no, "sem":sem, "marklist": markslist, "sem_status": semstatus}
+            # resultMethod(marks)
             return render_template("marklist.html", name= username, reg_no = reg_no, semester= sem, marklist= markslist, sem_status= semstatus)
-    else:
-        return render_template("index.html")
+    # return render_template("marklist.html", name= marks["name"], reg_no = marks["reg_no"], semester= marks["sem"], marklist= marks["marklist"], sem_status= marks["sem_status"])
 
 if __name__=='__main__':
     app.debug = True

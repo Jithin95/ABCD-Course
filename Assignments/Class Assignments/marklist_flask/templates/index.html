@@ -7,12 +7,12 @@
     </div>
     <div class="card-body">
 
-        <form action="/" method="post">
+        <form name = "marksubmit" action="/result" method="post" onsubmit="return checkValidation();">
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="username">Name</label>
-                        <input name="user_name" class="form-control" type="text" id="username" />
+                        <input name="user_name" class="form-control" type="text" id="username" required />
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="reg_no">Register Number</label>
-                        <input class="form-control" type="text" id="reg_no" name="reg_no" maxlength="20" style="text-transform:uppercase" />
+                        <input class="form-control" type="text" id="reg_no" name="reg_no" maxlength="20" style="text-transform:uppercase" required />
                     </div>
                 </div>
             </div>
@@ -39,10 +39,8 @@
                                         <option value="sem6">Semester 6</option>
                                         <option value="sem7">Semester 7</option>
                                         <option value="sem8">Semester 8</option>
-                                    </select> {% if error %}
-                        <small style="color:red;">
-                                            {{error}}
-                                        </small> {% endif %}
+                                    </select>
+                                    <div class="invalid-feedback">Please choose a semester.</div>
                     </div>
                 </div>
             </div>
@@ -55,13 +53,13 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="text" name="subject1_name" placeholder="Subject Name" class="form-control" />
+                        <input type="text" name="subject1_name" placeholder="Subject Name" class="form-control" required />
                     </div>
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="number" name="subject1_mark" placeholder="Subject Mark" class="form-control" />
+                        <input type="number" name="subject1_mark"  placeholder="Subject Mark" class="form-control" required />
                     </div>
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="number" name="subject1_tmark" placeholder="Subject Total Mark" class="form-control" />
+                        <input type="number" name="subject1_tmark"  placeholder="Subject Total Mark" class="form-control" required />
                     </div>
                 </div>
             </div>
@@ -74,13 +72,13 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="text" name="subject2_name" placeholder="Subject Name" class="form-control" />
+                        <input type="text" name="subject2_name"  placeholder="Subject Name" class="form-control" required />
                     </div>
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="number" name="subject2_mark" placeholder="Subject Mark" class="form-control" />
+                        <input type="number" name="subject2_mark"  placeholder="Subject Mark" class="form-control" required />
                     </div>
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="number" name="subject2_tmark" placeholder="Subject Total Mark" class="form-control" />
+                        <input type="number" name="subject2_tmark" placeholder="Subject Total Mark" class="form-control" required />
                     </div>
                 </div>
             </div>
@@ -93,13 +91,13 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="text" name="subject3_name" placeholder="Subject Name" class="form-control" />
+                        <input type="text" name="subject3_name"  placeholder="Subject Name" class="form-control"  required/>
                     </div>
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="number" name="subject3_mark" placeholder="Subject Mark" class="form-control" />
+                        <input type="number" name="subject3_mark" placeholder="Subject Mark" class="form-control" required />
                     </div>
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="number" name="subject3_tmark" placeholder="Subject Total Mark" class="form-control" />
+                        <input type="number" name="subject3_tmark"  placeholder="Subject Total Mark" class="form-control" required />
                     </div>
                 </div>
             </div>
@@ -112,13 +110,13 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="text" name="subject4_name" placeholder="Subject Name" class="form-control" />
+                        <input type="text" name="subject4_name"  placeholder="Subject Name" class="form-control" required />
                     </div>
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="number" name="subject4_mark" placeholder="Subject Mark" class="form-control" />
+                        <input type="number" name="subject4_mark" placeholder="Subject Mark" class="form-control" required />
                     </div>
                     <div class="col-md-4 col-sm-12 form-group">
-                        <input type="number" name="subject4_tmark" placeholder="Subject Total Mark" class="form-control" />
+                        <input type="number" name="subject4_tmark"  placeholder="Subject Total Mark" class="form-control" required />
                     </div>
                 </div>
             </div>
