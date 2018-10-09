@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }} />
+    <script type="text/javascript" src={{url_for ("static", filename="js/main.js") }}></script>
+    <title>Brand Name</title>
+</head>
+
+<body>
+    <section id="content">
+        <div class="container success-content">
+            <p class="text-center">{{message}}</p>
+            <a href={{ url_for('index') }}><button type="button" class="sample-button" name="button">Home</button></a>
+        </div>
+    </section>
+</body>
+</html>

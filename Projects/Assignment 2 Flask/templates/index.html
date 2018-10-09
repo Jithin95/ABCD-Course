@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }} />
+    <script type="text/javascript" src={{url_for ("static", filename="js/main.js") }}></script>
+    <title>Brand Name</title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header id="header">
+        <div class="header-content">
+            <div class="nav-brand">
+                <a href="#">Brand Name</a>
+            </div>
+            <nav>
+                <li class="nav">
+                    <ul><a href="#features">Features</a></ul>
+                    <ul><a href="#working">How it Works</a></ul>
+                    <ul><a href="#pricing">Pricing</a></ul>
+                </li>
+            </nav>
+        </div>
+    </header>
+
+    <!-- get started -->
+    <section id="get-started">
+        <div class="contents">
+            <div class="container text-center">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <h3 class="heading">Get Started</h3>
+                <form action="/" method="post">
+                    <input type="email" name="email-getstarted" placeholder="Email" required />
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- features -->
+
+    <section id="features">
+        <div class="container">
+            <div class="features-header text-center">
+                <h3 class="heading">The Only Tool You'll Ever Need.</h3>
+                <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, maiores maxime vero quis. Molestias accusamus dolorem illo mollitia sunt! Libero.</p>
+                <hr>
+            </div>
+
+            <div class="feature-container">
+                <div class="feature-items">
+                    <i class="fa fa-fire fa-4x" aria-hidden="true"></i>
+                    <h3 class="subheading">Lorem ipsum.</h3>
+                    <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, omnis.</p>
+                </div>
+
+                <div class="feature-items">
+                    <i class="fa fa-truck  fa-4x" aria-hidden="true"></i>
+                    <h3 class="subheading">Lorem ipsum.</h3>
+                    <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, omnis.</p>
+                </div>
+
+                <div class="feature-items">
+                    <i class="fa fa-battery-full fa-4x" aria-hidden="true"></i>
+                    <h3 class="subheading">Lorem ipsum.</h3>
+                    <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, omnis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- how it works -->
+    <section id="working">
+        <div class="container">
+            <div class="features-header text-center">
+                <h3 class="heading">Working</h3>
+                <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, maiores maxime vero quis. Molestias accusamus dolorem illo mollitia sunt! Libero.</p>
+
+            </div>
+            <iframe width="800" height="380" src="https://www.youtube.com/embed/zGnpT8okBs0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- pricing -->
+    <section id="pricing">
+        <div class=" container text-center">
+            <h3 class="heading">Pricing</h3>
+            <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, quia?</p>
+            <hr>
+            <div class="pricing-contents">
+                <div class="border-box text-center">
+                    <div class="box-top">
+                        <h3 class="smallheading">Small Business</h3>
+                        <h3 class="subheading-white"><span>&#36;</span> 100</h3>
+                    </div>
+                    <div class="box-body">
+                        <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo adipisci consectetur assumenda labore maxime! Distinctio.</p>
+                        <button href="#" type="button" name="button">Sign up</button>
+                    </div>
+
+                </div>
+                <div class="border-box text-center">
+                    <div class="box-top">
+                        <h3 class="smallheading">Team</h3>
+                        <h3 class="subheading-white"><span>&#36;</span> 200</h3>
+                    </div>
+                    <div class="box-body">
+                        <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo adipisci consectetur assumenda labore maxime! Distinctio.</p>
+                        <button href="#" type="button" name="button">Sign up</button>
+                    </div>
+
+                </div>
+                <div class="border-box text-center">
+                    <div class="box-top">
+                        <h3 class="smallheading">Enterprises</h3>
+                        <h3 class="subheading-white"><span>&#36;</span> 300</h3>
+                    </div>
+                    <div class="box-body">
+                        <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo adipisci consectetur assumenda labore maxime! Distinctio.</p>
+                        <button href="#" type="button" name="button">Sign up</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer text-center" class="footer">
+        <p>&copy 2018 Company Name</p>
+    </footer>
+
+</body>
+
+</html>
