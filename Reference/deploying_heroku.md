@@ -39,3 +39,5 @@
 6. open app
 
         heroku open
+        
+ > some issue when virtualenv is active 
