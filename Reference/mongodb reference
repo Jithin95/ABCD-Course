@@ -1,0 +1,56 @@
+use collegedb
+db.createCollection('students')
+db.students.insert({first_name: "Jithin", last_name: "S"});
+db.students.find();
+db.students.find().pretty();
+db.students.update({first_name: "Harikrishnan"}, {first_name:"Hari", last_name: "K", gender: "Male"}); // update with new value
+
+db.students.update({first_name: "Kiran"}, {$set: {last_name: "TS", gender: "Male"}}); //update only set value
+
+//querying
+db.students.find({first_name: "Hari"}).pretty();
+
+//or operator
+db.students.find({$or:[{first_name: ""}, {first_name: "Hari"}]}).pretty();
+
+//and operator
+db.students.find({$and:[{first_name: ""}, {last_name: "Hari"}]}).pretty();
+
+// sort 
+db.students.find().sort({first_name:1}).pretty(); //accending
+db.students.find().sort({first_name:-1}).pretty(); //decending
+
+//count
+db.students.find().count();
+
+//limit
+db.students.find().limit(5);
+
+//skip first 2 items
+db.students.find().limit(5).skip(2);
+
+// query document
+db.students.find({age: {$gt:1}});
+db.students.find({age: {$lt:1}});
+db.students.find({age: {$gte:1}});
+db.students.find({age: {$lte:1}});
+db.students.find({age: {$ne:1}});
+
+//example
+db.students.find({$or:[{age: {$gt:5}}]});
+db.students.find({$or:[{age: {$gt:5}}, {age: {$lt: 50}}]});
+db.students.find({$and:[{age: {$gt:5}}, {age: {$lt: 49}}]});
+
+// JS print functions
+db.students.find().forEach(function(documents) { print ("Student Name : "+ documents.first_name);});
+
+// Remove
+db.students.remove({first_name: "Harikrishnan"});
+db.students.remove({first_name: "Harikrishnan"}, 1);
+
+// drop
+db.dropDatabase();
+db.COLLECTION_NAME.drop();
+
+show dbs
+show collections
