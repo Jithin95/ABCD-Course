@@ -1,0 +1,21 @@
+body, html {
+    margin: 0;
+    background-color: #F8F9FA;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.login-form{
+    width: 500px;
+    height: 90vh;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.margin-top-16 {
+    margin-top: 16px;
+}

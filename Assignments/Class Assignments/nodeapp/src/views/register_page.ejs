@@ -1,0 +1,91 @@
+<% include partials/header %>
+<header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">My Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNotLogin" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNotLogin">
+                <ul class="navbar-nav mr-auto">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">New <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trending</a>
+                    </li> -->
+                </ul>
+                <ul class="navbar-nav my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/login">Login <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+
+<!-- register form -->
+<div class="container login-form">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="text-center">REGISTER</h3>
+            <!-- errors -->
+            <% if(isfirst !== undefined) {%>
+            <% if (!haveerror) {%>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                     <%= errorList[0].msg  %>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <%} else if (!haveerrorUser ) {%>
+
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                     Username Already Exists
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <%} %>
+            <%} %>
+
+
+            <form action="/account/register" method="post">
+                <div class="input-group mb-2 margin-top-16">
+                    <input type="text" class="form-control" name="username" placeholder="Username" />
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <div class="input-group mb-2">
+                    <input type="password" class="form-control" name="pass" placeholder="Password" />
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <div class="input-group mb-2">
+                    <input type="password" class="form-control" name="rpass" placeholder="Repeat Password" />
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+
+
+                <div class="form-group margin-top-16">
+                    <button type="submit" class="btn btn-primary form-control">Register</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<% include partials/footer %>
