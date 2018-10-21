@@ -22,7 +22,7 @@ express()
     .set('view engine', 'ejs')
     .get('/', (req, res) => {
         postData.find((err, post) => {
-        console.log("login user data " + req.session.loginuserdata);
+            console.log("Post Data " + post.length);
         if (req.session.loginuserdata) {
             res.render('loggedindex', {
                 loggeduser: req.session.loginuserdata,

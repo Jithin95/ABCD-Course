@@ -1,11 +1,34 @@
 body, html {
     margin: 0;
-    background-color: #F8F9FA;
+    /* background-color: #F8F9FA; */
+    background-color: #e9ecef;
+    --color-primary : #343a40;
 }
-
+.text-capitalise {
+    text-transform: capitalize;
+}
+.sub-heading {
+    padding: 5px 0px;
+    color: grey;
+}
+.top_padding{
+    padding: 5px 0px;
+}
 .card {
     background-color: #fff;
     padding: 20px;
+    border-radius: 0px;
+}
+.p-content {
+    padding: 5px 0px;
+    line-height: 1.6;
+    height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-container {
+    margin-bottom: 20px;
 }
 
 .login-form{
@@ -16,6 +39,22 @@ body, html {
 }
 
 
-.margin-top-16 {
-    margin-top: 16px;
+.margin-top-button {
+    margin-top: 18px;
+}
+
+.margin-bottom-button {
+    margin-bottom: 18px;
+}
+
+.jumbotron {
+    padding: 40px;
+    border-radius: 0;
+    margin: 0;
+
+}
+
+.button-primary {
+    background-color: var(--color-primary)!important;
+    color: #fff!important;
 }

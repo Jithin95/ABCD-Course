@@ -1,6 +1,6 @@
 <% include partials/header %>
 <header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="/">My Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLogin" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,20 +9,16 @@
 
             <div class="collapse navbar-collapse" id="navbarLogin">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">New <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Trending</a>
-                    </li>
+
+                </ul>
+                <ul class="navbar-nav my-2 my-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="/user/addpost">Add Post</a>
                     </li>
-                </ul>
-                <ul class="navbar-nav my-2 my-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <%=loggeduser.username%>
+                            <span class="text-capitalise">
+                                <%=loggeduser.username%></span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="/user/mypost">My Post</a>
@@ -35,20 +31,42 @@
     </nav>
 </header>
 
+<div class="jumbotron">
+    <div class="container">
+        <h1>All Post</h1>
+    </div>
+</div>
 
 <div class="container">
+
+    <%if (post.length > 0) {%>
     <%for (var i=0; i< post.length; i++) {%>
+    <div class="card-container">
         <div class="card">
             <div class="card-body">
-
-                    <h3><%=post[i].title%></h3>
-                    <p><%=post[i].modifieddate%></p>
-                    <p><%=post[i].user.username%></p>
-                    <p><%=post[i].discontent%></p>
-
-                <a href="/post/<%=post[i]._id%>"><button class="btn btn-primary" type="button" name="button">Read More</button></a>
+                <h3 class="font-weight-bold">
+                    <%=post[i].title%>
+                </h3>
+                <div class="sub-heading form-inline">
+                    <span class="text-capitalise">
+                        <%=post[i].user.username%>, </span>
+                    <%=post[i].modifieddate%>
+                </div>
+                <div class="p-content">
+                    <%=post[i].discontent%>
+                </div>
+                <div class="ml-auto">
+                    <a href="/post/<%=post[i]._id%>"><button class="btn btn-primary" type="button" name="button">Read More</button></a>
+                </div>
             </div>
         </div>
+    </div>
+    <%}%>
+    <%} else {%>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">No Post Found!</h4>
+        <p><a href="/user/addpost">Click here </a> to add Post.</p>
+    </div>
     <%}%>
 </div>
 

@@ -1,6 +1,6 @@
 <% include partials/header %>
 <header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="/">My Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNotLogin" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
 <div class="container login-form">
     <div class="card">
         <div class="card-body">
-            <h3 class="text-center">LOGIN</h3>
+            <h3 class="text-center margin-bottom-button">LOGIN</h3>
             <% if (usercreated) {%>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                      User created Successfully!
@@ -80,8 +80,8 @@
                     </div>
                 </div>
 
-                <div class="form-group margin-top-16">
-                    <button type="submit" class="btn btn-primary form-control">Login</button>
+                <div class="form-group margin-top-button">
+                    <button type="submit" class="btn btn-default button-primary form-control" >Login</button>
                 </div>
 
             </form>

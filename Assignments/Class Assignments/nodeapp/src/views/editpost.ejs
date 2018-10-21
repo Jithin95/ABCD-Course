@@ -1,6 +1,6 @@
 <% include partials/header %>
 <header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="/">My Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLogin" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,20 +9,13 @@
 
             <div class="collapse navbar-collapse" id="navbarLogin">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">New <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Trending</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/user/addpost">Add Post</a>
-                    </li>
+
                 </ul>
                 <ul class="navbar-nav my-2 my-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <%=loggeduser.username%>
+                            <span class="text-capitalise">
+                                <%=loggeduser.username%></span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="/user/mypost">My Post</a>
@@ -36,10 +29,14 @@
 
 </header>
 
+<div class="jumbotron">
+    <div class="container">
+        <h1>Edit Post</h1>
+    </div>
+</div>
 
 <div class="container">
     <form class="" action="/user/editpost/<%=post._id%>" method="post">
-        <h3 class="text-center">Edit Post</h3>
         <% if (!validationCheck && validationError) {%>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                  <%= validationError[0].msg  %>
@@ -61,7 +58,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit"  class="btn btn-primary">Submit</button>
+            <button type="submit"  class="btn btn-default button-primary">Submit</button>
         </div>
     </form>
 </div>

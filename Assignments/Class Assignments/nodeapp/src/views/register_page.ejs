@@ -1,6 +1,6 @@
 <% include partials/header %>
 <header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="/">My Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNotLogin" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,27 +59,27 @@
 
             <form action="/account/register" method="post">
                 <div class="input-group mb-2 margin-top-16">
-                    <input type="text" class="form-control" name="username" placeholder="Username" />
+                    <input type="text" class="form-control" name="username" placeholder="Username" required/>
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
                     </div>
                 </div>
                 <div class="input-group mb-2">
-                    <input type="password" class="form-control" name="pass" placeholder="Password" />
+                    <input type="password" class="form-control" name="pass" placeholder="Password" required/>
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
                     </div>
                 </div>
                 <div class="input-group mb-2">
-                    <input type="password" class="form-control" name="rpass" placeholder="Repeat Password" />
+                    <input type="password" class="form-control" name="rpass" placeholder="Repeat Password" required/>
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
                     </div>
                 </div>
 
 
-                <div class="form-group margin-top-16">
-                    <button type="submit" class="btn btn-primary form-control">Register</button>
+                <div class="form-group margin-top-button">
+                    <button type="submit" class="btn btn-default button-primary form-control">Register</button>
                 </div>
 
             </form>
