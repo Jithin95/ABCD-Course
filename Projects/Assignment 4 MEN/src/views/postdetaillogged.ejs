@@ -1,0 +1,62 @@
+<% include partials/header %>
+<header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">My Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLogin" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarLogin">
+                <ul class="navbar-nav mr-auto">
+
+                </ul>
+                <ul class="navbar-nav my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/addpost">Add Post</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="text-capitalise">
+                                <%=loggeduser.username%></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/user/mypost">My Post</a>
+                            <a class="dropdown-item" href="/account/logout">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Post Detail</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="card-container">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="font-weight-bold">
+                    <%=post.title%>
+                </h3>
+                <div class="sub-heading form-inline">
+                    <span class="text-capitalise">
+                        <%=post.user.username%>, </span>
+                    <%=post.modifieddate%>
+                </div>
+                <div class="p-content">
+                    <%=post.content%>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>
