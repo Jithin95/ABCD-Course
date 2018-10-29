@@ -1,1 +1,1 @@
-heroku link : https://nodeblogapp.herokuapp.com/
+heroku link : https://mynodeblogapp.herokuapp.com/
