@@ -9,6 +9,9 @@
 
     web: gunicorn appfilename:appobject
 
+    web: node app.js // in node app
+
+
 > appfilename - Filename of app managing file,
 > appobject - object of flask
 
